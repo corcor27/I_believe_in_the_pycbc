@@ -24,12 +24,12 @@ TAPER="start"
 # Spin parameters
 MIN_SPIN1=0.75
 MAX_SPIN1=0.75
-MIN_KAPPA1=0.0
-MAX_KAPPA1=0.0
+#MIN_KAPPA1=0.0
+#MAX_KAPPA1=0.0
 MIN_SPIN2=0.0
 MAX_SPIN2=0.0
-MIN_KAPPA2=0.0
-MAX_KAPPA2=0.0
+#MIN_KAPPA2=0.0
+#MAX_KAPPA2=0.0
 
 # path of injection file that will be created in the example
 INJ_PATH=${NAMEDIR}/injection.xml.gz
@@ -81,21 +81,15 @@ lalapps_inspinj \
     --min-distance ${DISTANCE} \
     --max-distance ${DISTANCE} \
     --i-distr fixed \
-    --fixed-inc ${INC_inj} \
+    --fixed-inc ${INC} \
     --coa-phase-distr fixed \
-    --fixed-coa-phase ${COA_PHASE_inj} \
-    --polarization ${POLARIZATION_inj} \
+    --fixed-coa-phase ${COA_PHASE} \
+    --polarization ${POLARIZATION} \
     --m-distr fixMasses \
     --fixed-mass1 ${MASS1} \
     --fixed-mass2 ${MASS2} \
     --taper-injection ${TAPER} \
-    --enable-spin \
-    --min-spin1 ${MIN_SPIN1} \
-    --max-spin1 ${MAX_SPIN1} \
-    --min-spin2 ${MIN_SPIN2} \
-    --max-spin2 ${MAX_SPIN2} \
-    --min-kappa1 ${MIN_KAPPA1} \
-    --max-kappa1 ${MAX_KAPPA1} \
+    --disable-spin
 
 # Output parameters as text file
 printf "Injection approximant = ${INJ_APPROX} \n" > ${PAR}
@@ -114,12 +108,12 @@ printf "Sampler min frequency = ${F_MIN} \n" >> ${PAR}
 printf " \nSpin parameters: \n" >> ${PAR}
 printf "Spin1 min = ${MIN_SPIN1} \n" >> ${PAR}
 printf "Spin1 max = ${MAX_SPIN1} \n" >> ${PAR}
-printf "Spin1 min kappa = ${MIN_KAPPA1} \n" >> ${PAR}
-printf "Spin1 max kappa = ${MAX_KAPPA1} \n" >> ${PAR}
+#printf "Spin1 min kappa = ${MIN_KAPPA1} \n" >> ${PAR}
+#printf "Spin1 max kappa = ${MAX_KAPPA1} \n" >> ${PAR}
 printf "Spin2 min = ${MIN_SPIN2} \n" >> ${PAR}
 printf "Spin2 max = ${MAX_SPIN2} \n" >> ${PAR}
-printf "Spin2 min kappa = ${MIN_KAPPA2} \n" >> ${PAR}
-printf "Spin2 max kappa = ${MAX_KAPPA2} \n" >> ${PAR}
+#printf "Spin2 min kappa = ${MIN_KAPPA2} \n" >> ${PAR}
+#printf "Spin2 max kappa = ${MAX_KAPPA2} \n" >> ${PAR}
 printf " \nSampler parameters: \n" >> ${PAR}
 printf "Number of walkers = ${N_WALKERS} \n" >> ${PAR}
 printf "Number of checkpoints = ${N_CHECKPOINT} \n" >> ${PAR}
