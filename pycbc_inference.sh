@@ -54,7 +54,7 @@ N_ITERATIONS=12000
 N_CHECKPOINT=1000
 PROCESSING_SCHEME=cpu
 NPROCS=12
-CONFIG_PATH=inference.ini
+CONFIG_PATH=infenerce.ini
 
 # get coalescence time as an integer
 TRIGGER_TIME_INT=${TRIGGER_TIME%.*}
