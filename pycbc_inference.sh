@@ -8,8 +8,8 @@ PAR=${NAMEDIR}/parameters.txt
 # define coalescence time, observed masses, and waveform parameters
 TRIGGER_TIME=1126259462.0
 INJ_APPROX=IMRPhenomDthreePointFivePN
-MASS1=15.
-MASS2=5.
+MASS1=20.
+MASS2=20.
 RA=2.21535724066
 DEC=-1.23649695537
 THETA_JN=2.7  ### <<---- this parameter is no longer relevant
